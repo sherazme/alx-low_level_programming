@@ -1,0 +1,2 @@
+sh/bin
+$gcc $CFILE -s -o  $CFILE.s
