@@ -15,11 +15,12 @@ int main(void)
 		{
 			putchar(num + 48);
 			putchar(num1 + 48);
-			if (num != 8 && num1 != 9)
+			if (num == 8 && num1 == 9)
 			{
-				putchar(',');
-				putchar(' ');
+				continue;
 			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
