@@ -5,7 +5,7 @@
 * _islower - Entry point
 *
 * Return: Always 0 (Success)
-* c is the char
+* parameter c is the char
 */
 int _islower(int c)
 {
@@ -18,5 +18,5 @@ int _islower(int c)
 			low = 1;
 	}
 
-	return low;
+	return (low);
 }
