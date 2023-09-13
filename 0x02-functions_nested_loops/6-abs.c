@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
-* print_sign - Entry point
+* _abs - Entry point
 * @n: parameter
 *
 * Return: Always 0 (Success)
 */
-int print_sign(int n)
+int _abs(int n)
 {
 	int c;
 
