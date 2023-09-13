@@ -1,31 +1,24 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
-*  jack_bauer- Entry point
-*
-* Return: Always 0 (Success)
-*/
+ * jack_bauer - Check Holberton
+ * Description: function prints every minute in one day
+ * Return: Nothing
+ */
 void jack_bauer(void)
 {
-	int h, hh, m, mm;
+	int H, M;
 
-	for (h = 0; h < 3; h++)
+	for (H = 0; H < 24; H++)
 	{
-		for (hh = 0; hh < 4; hh++)
+		for (M = 0; M < 60; M++)
 		{
-			for (m = 0; m < 6; m++)
-			{
-				for (mm = 0; mm < 10; mm++)
-				{
-					_putchar(h + '0');
-					_putchar(hh + '0');
-					_putchar(':');
-					_putchar(m + '0');
-					_putchar(mm + '0');
-					_putchar('\n');
-				}
-			}
+			_putchar((H / 10) + '0');
+			_putchar((H % 10) + '0');
+			_putchar(':');
+			_putchar((M / 10) + '0');
+			_putchar((M % 10) + '0');
+			_putchar('\n');
 		}
 	}
 }
