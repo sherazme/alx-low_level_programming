@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * add - Check description
+ * mul - Check description
  * Description: It prints the word Holberton, followed by a new line.
  * @a: first
  * @b: second

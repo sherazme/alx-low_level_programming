@@ -2,20 +2,19 @@
 #include "main.h"
 
 /**
- * _isdigit - Check characters
- * @c: An input character
+ * print_most_numbers - Check characters
  * Description: function uses _putchar function to print
  * alphabet in lowercase 10 times
  * Return: 1 if is lowercase or 0 if is uppercase
 */
-int _isdigit(int c)
+void print_most_numbers(void)
 {
-	int digit = 0, i;
+	int i;
 
 	for (i = 0; i <= 9; i++)
 	{
-		if (c == i)
-			digit = 1;
+		if (i != 2 && i != 4)
+			_putchar(i + '0');
 	}
-	return (digit);
+	_putchar('\n');
 }
