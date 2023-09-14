@@ -14,11 +14,11 @@ int main(void)
 	y = 2;
 	while (y < 4000000)
 	{
+		if (y % 10 == 0)
+			sum += y;
 		z = x + y;
 		x = y;
 		y = z;
-		if (y % 10 == 0)
-			sum += y;
 	}
 	printf("%lu\n", sum);
 	return (0);
