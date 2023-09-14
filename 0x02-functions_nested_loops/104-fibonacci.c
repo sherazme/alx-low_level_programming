@@ -14,7 +14,7 @@ int main(void)
 	y = 2;
 	printf("%lu", x);
 	printf(", %lu", y);
-	for (r = 2; r < 98; r++)
+	for (r = 3; r < 98; r++)
 	{
 		z = x + y;
 		x = y;
