@@ -8,18 +8,18 @@
 
 int main(void)
 {
-	int r, x, y, z;
+	long int r, x, y, z;
 
 	x = 1;
 	y = 2;
-	printf("%d, ", x);
-	printf("%d, ", y);
-	for (r = 3; r < 50; r++)
+	printf("%d", x);
+	printf(", %d", y);
+	for (r = 2; r < 50; r++)
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		printf("%d, ", y);
+		printf(", %d", y);
 	}
 	printf("\n");
 	return (0);
