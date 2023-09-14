@@ -15,6 +15,6 @@ int main(void)
 		if (r % 3 == 0 || r % 5 == 0)
 			x += r;
 	}
-	printf(x);
+	printf("%d\n",x);
 	return (0);
 }
