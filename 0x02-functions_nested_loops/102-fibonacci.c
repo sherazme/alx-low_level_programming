@@ -12,14 +12,14 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	printf("%d", x);
-	printf(", %d", y);
+	printf("%lu", x);
+	printf(", %lu", y);
 	for (r = 2; r < 50; r++)
 	{
 		z = x + y;
 		x = y;
 		y = z;
-		printf(", %d", y);
+		printf(", %lu", y);
 	}
 	printf("\n");
 	return (0);
