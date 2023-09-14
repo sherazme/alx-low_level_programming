@@ -12,7 +12,7 @@ int main(void)
 
 	x = 1;
 	y = 2;
-	for (r = 2; y < 4000000; r++)
+	while (y < 4000000)
 	{
 		z = x + y;
 		x = y;
