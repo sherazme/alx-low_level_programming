@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int sum, x, y, z;
+	int sum, x, y, z;
 
 	x = 1;
 	y = 2;
@@ -20,6 +20,6 @@ int main(void)
 		x = y;
 		y = z;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
