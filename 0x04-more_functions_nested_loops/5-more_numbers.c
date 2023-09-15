@@ -4,8 +4,7 @@
 /**
  * more_numbers - Check characters
  * Description: function uses _putchar function to print
- * alphabet in lowercase 10 times
- * Return: 1 if is lowercase or 0 if is uppercase
+ * Return: nothing
 */
 void more_numbers(void)
 {
