@@ -1,9 +1,9 @@
 #include "main.h"
-void print_integer(int m);
+void print_num(int num);
 
 /**
- * print_number - a function that prints an integer.
- * @n: An input integer
+ * print_number - a function that prints
+ * @n: An input
  * Return: Nothing
  */
 void print_number(int n)
@@ -13,24 +13,24 @@ void print_number(int n)
 	else if (n < 0)
 	{
 		_putchar('-');
-		print_integer(n * -1);
+		printnum(n * -1);
 	}
 	else
-		print_integer(n);
+		print_num(n);
 }
 
 /**
- * print_integer - A function to priting n
- * @m: an input unsigned integer
+ * print_num - A function to priting n
+ * @num: an input unsigned integer
  * Return: Nothing
  */
-void print_integer(int m)
+void print_num(int num)
 {
-	int i = 1000000000;
+	int i = 1000000;
 
 	for (; i >= 1; i /= 10)
-		if (m / i != 0)
+		if (num / i != 0)
 		{
-			_putchar((m / i) % 10 + '0');
+			_putchar((num / i) % 10 + '0');
 		}
 }
