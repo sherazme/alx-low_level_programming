@@ -1,35 +1,36 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
+void print_integer(int m);
 
 /**
- * print_number - Check characters
- * @n: number
- * Description: function uses _putchar function to print
- * alphabet in lowercase 10 times
- * Return: 1 if is lowercase or 0 if is uppercase
-*/
+ * print_number - a function that prints an integer.
+ * @n: An input integer
+ * Return: Nothing
+ */
 void print_number(int n)
 {
+	if (n == 0)
+		_putchar('0');
+	else if (n < 0)
+	{
+		_putchar('-');
+		print_integer(n * -1);
+	}
+	else
+		print_integer(n);
+}
 
-	if (n <= 9)
-		_putchar(n + '0');
-	else if (n <= 99)
-	{
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n <= 999)
-	{
-		_putchar(n % 100 + '0');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	else if (n <= 9999)
-	{
-		_putchar(n % 1000 + '0');
-		_putchar(n % 100 + '0');
-		_putchar(n / 10 + '0');
-		_putchar(n % 10 + '0');
-	}
-	_putchar('\n');
+/**
+ * print_integer - A function to priting n
+ * @m: an input unsigned integer
+ * Return: Nothing
+ */
+void print_integer(int m)
+{
+	int i = 1000000000;
+
+	for (; i >= 1; i /= 10)
+		if (m / i != 0)
+		{
+			_putchar((m / i) % 10 + '0');
+		}
 }
