@@ -23,7 +23,7 @@ char *_strncat(char *dest, char *src, int n)
 		src++;
 	}
 	src = srctemp;
-	if ( n > strlength)
+	if ( n >= strlength)
 		n = strlength;
 	for ( ; i < n; i++)
 		*dest++ = *src++;
