@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include "main.h"
 
-bool segment_check(char c);
 /**
  * cap_string - Check characters
  * @s: An input character
@@ -12,30 +10,19 @@ bool segment_check(char c);
 */
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i = 0, j = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}' };
 
 	while (s[i])
 	{
-		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
-			s[i] -= 32;
-
-		if (segment_check(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
-			s[i + 1] -= 32;
+		for (j = 0; j < 13 ; j++)
+		{
+			if ((i == 0 || s[i - 1] == seperators[j]) && (s[i] >= 97 && s[i] <= 122))
+				s[i] -= 32;
+		}
 		i++;
 	}
 
 	return (s);
-}
-
-bool segment_check(char c)
-{
-	int i = 0;
-	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
-		'"', '(', ')', '{', '}' };
-	for (; i < 13; i++)
-	{
-		if (c == seperators[i])
-			return (true);
-	}
-	return (false);
 }
