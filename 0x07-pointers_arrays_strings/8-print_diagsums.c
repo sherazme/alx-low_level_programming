@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_ diagsums- Check characters
+ * print_diagsums- Check characters
  * Description: function uses _putchar function to print
  * @a: the number of times the character _ should be printed
  * @size: size
