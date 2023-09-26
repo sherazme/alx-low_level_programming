@@ -2,11 +2,10 @@
 #include "main.h"
 
 /**
- * print_ chessboard- Check characters
+ * print_chessboard - prints characters
  * Description: function uses _putchar function to print
  * @a: the number of times the character _ should be printed
- * alphabet in lowercase 10 times
- * Return: 1 if is lowercase or 0 if is uppercase
+ * Return: void
 */
 void print_chessboard(char (*a)[8])
 {
@@ -17,13 +16,6 @@ void print_chessboard(char (*a)[8])
 		for (j = 0; j < 8; j++)
 		{
 			_putchar(a[i][j]);
-			/**
-			 * if (j < 7)
-			 * {
-			 * 	_putchar(',');
-			 * 	_putchar(' ');
-			 * }
-			 */
 		}
 		_putchar('\n');
 	}
