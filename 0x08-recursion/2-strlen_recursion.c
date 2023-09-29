@@ -2,16 +2,14 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion - Check characters
+ * _strlen_recursion - Check characters
  * @s: A n input character
  * Description: function uses _putchar function to print
  * Return: length
 */
-void _print_rev_recursion(char *s)
+int _strlen_recursion(char *s)
 {
-	if (*s == '\0')
-		return;
-
-	_print_rev_recursion(s + 1);
-	_putchar(*s);
+	if (*s)
+		return (1 + _strlen_recursion(s + 1));
+	return (0);
 }
