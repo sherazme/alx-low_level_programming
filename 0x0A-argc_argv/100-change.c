@@ -11,35 +11,35 @@
 */
 int main(int argc, char *argv[])
 {
-	int money, coins = 0;
+	int amount, coins = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	money = atoi(argv[1]);
-	if (money <= 0)
+	amount = atoi(argv[1]);
+	if (amount <= 0)
 	{
 		printf("0\n");
 		return (1);
 	}
-	while (money > 0)
+	while (amount > 0)
 	{
-		if (money >= 25)
-			money -= 25;
+		if (amount >= 25)
+			amount -= 25;
 
-		else if (money >= 10)
-			money -= 10;
+		else if (amount >= 10)
+			amount -= 10;
 
-		else if (money >= 5)
-			money -= 5;
+		else if (amount >= 5)
+			amount -= 5;
 
-		else if (money >= 2)
-			money -= 2;
+		else if (amount >= 2)
+			amount -= 2;
 
-		else if (money >= 1)
-			money -= 1;
+		else if (amount >= 1)
+			amount -= 1;
 
 		coins++;
 	}
