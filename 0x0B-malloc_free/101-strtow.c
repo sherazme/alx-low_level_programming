@@ -27,7 +27,7 @@ char **strtow(char *str)
 	{
 		if (str[i] != ' ' && (str[i - 1] == ' ' || i == 0))
 		{
-			start = i;
+			slen = 0, start = i;
 			while (str[i] != ' ' && str[i])
 			{
 				len++;
