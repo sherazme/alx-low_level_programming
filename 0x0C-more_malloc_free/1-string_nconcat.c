@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdlib.h>
 
+unsigned int String_length(char *str);
+
 /**
  * string_nconcat - function
  * @s1: value
@@ -10,28 +12,19 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *s, *tmp;
+	char *s;
 	unsigned int i = 0, j = 0, len = 1, len2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
-	tmp = s1;
-	while (*s1)
-	{
-		len++;
-		s1++;
-	}
 
-	s1 = tmp;
+	len += String_length(s1);
+
 	if (s2 == NULL)
 		s2 = "";
-	tmp = s2;
-	while (*s2)
-	{
-		len2++;
-		s2++;
-	}
-	s2 = tmp;
+
+	len2 = String_length(s2);
+
 	if (n < len2)
 		len += n;
 	else
@@ -56,4 +49,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	s[i] = '\0';
 	return (s);
+}
+/**
+ * String_length - function
+ * @str: value
+ * Return: pointer
+ */
+unsigned int String_length(char *str)
+{
+	char *tmp;
+	unsigned int l = 0;
+
+	tmp = str;
+	while (*str)
+	{
+		l++;
+		str++;
+	}
+	str = tmp;
+	return (l);
 }
