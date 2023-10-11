@@ -1,13 +1,14 @@
 #include <stdio.h>
 
-/*
- * main - function
- * Return: always 0
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
  */
 
-int main()
+int main(void)
 {
-    printf("%s\n", __FILE__);
+	printf("%s\n", __FILE__);
 
-    return 0;
+	return (0);
 }
