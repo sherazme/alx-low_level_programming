@@ -9,27 +9,27 @@
  */
 int main(int argc, char *argv[])
 {
-	int byte, i = 0;
-	unsigned char *func;
+	int n, i;
+	char *a = (char *)&main;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	byte = atoi(argv[1]);
-	if (byte < 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	func = (unsigned char *)main;
 
-	if (byte > 0)
+	for (i = 0; i < n; i++)
 	{
-		while (i < byte--)
-			printf("%02hhx ", func[i++]);
-		printf("%hhx\n", func[i]);
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
+			printf(" ");
 	}
+	printf("\n");
 	return (0);
 }
