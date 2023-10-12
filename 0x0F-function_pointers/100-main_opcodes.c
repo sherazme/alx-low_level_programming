@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 	func = (unsigned char *)main;
-	
+
 	if (byte > 0)
 	{
 		while (i < byte--)
