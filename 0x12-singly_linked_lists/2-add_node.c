@@ -31,19 +31,3 @@ list_t *add_node(list_t **head, const char *str)
 
 	return (new);
 }
-
-/**
- * _strlen - lenght of string.
- * @str: String
- * Return: lenght
- */
- 
-int _strlen(char *str)
-{
-	int len;
-
-	for (len = 0; str[len]; len++)
-		;
-
-	return (len);
-}
