@@ -2,7 +2,7 @@
 
 /**
  * sum_listint - sum list
- * @h: Head
+ * @head: Head
  * Return: nodes count
  */
 int sum_listint(listint_t *head)
@@ -21,3 +21,4 @@ int sum_listint(listint_t *head)
 
 	return (sum);
 }
+
