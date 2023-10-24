@@ -11,7 +11,7 @@ int sum_listint(listint_t *head)
 	int sum = 0;
 	const listint_t *current;
 
-	current = h;
+	current = head;
 
 	while (current != NULL)
 	{
