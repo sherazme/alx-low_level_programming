@@ -14,9 +14,6 @@ int set_bit(unsigned long int *n, unsigned int index)
 	max <<= index;
 	if (max == 0)
 		return (-1);
-
-	if ((n & max))
-		return (1);
-	else
-		return (0);
+	*n |= max;
+	return (1);
 }
