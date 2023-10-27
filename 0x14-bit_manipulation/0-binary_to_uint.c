@@ -5,7 +5,7 @@
  * @b: String
  * Return: number
  */
- 
+
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int base = 1, result = 0, len = 0;
