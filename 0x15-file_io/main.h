@@ -16,5 +16,6 @@ int append_text_to_file(const char *filename, char *text_content);
 
 int _strlen(char *str);
 void exit_and_print(char *msg, char *argument, int code);
+void exit_and_print_int(char *msg, char *argument, int code);
 
 #endif /* MAIN_H */

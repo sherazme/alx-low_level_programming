@@ -33,10 +33,10 @@ int main(int ac, char **av)
 		exit_and_print("Error: Can't read from file %s\n", av[1], 98);
 
 	if (close(source) == -1)
-		exit_and_print("Error: Can't close fd %d\n", source, 100);
+		exit_and_print_int("Error: Can't close fd %d\n", source, 100);
 
 	if (close(destination) == -1)
-		exit_and_print("Error: Can't close fd %d\n", destination, 100);
+		exit_and_print_int("Error: Can't close fd %d\n", destination, 100);
 	return (0);
 
 }
@@ -49,9 +49,22 @@ int main(int ac, char **av)
  * Return: void
  */
 
-void exit_and_print(const char *msg, const char *argument, int code)
+void exit_and_print(char *msg, char *argument, int code)
 {
 	dprintf(STDERR_FILENO, msg, argument);
 	exit(code);
 }
 
+/**
+ * exit_and_print - exit and print
+ * @msg: message to be printed
+ * @argument: av
+ * @code: exit code
+ * Return: void
+ */
+
+void exit_and_print_int(char *msg, char *argument, int code)
+{
+	dprintf(STDERR_FILENO, msg, argument);
+	exit(code);
+}
