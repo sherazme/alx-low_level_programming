@@ -8,6 +8,7 @@
 int main(int ac, char **av)
 {
 	ssize_t source, destination, byteRead, byteWrite;
+	char buffer[1024];
 	
 	if (ac != 3)
 		exit_and_print("Usage: cp file_from file_to\n", av[0], 97);
@@ -20,7 +21,7 @@ int main(int ac, char **av)
 	if (destination == -1)
 		exit_and_print("Error: Can't write to %s\n", av[2], 99);
 	
-	while ((byteRead = read(source, buffer, BUFFSIZE)) > 0)
+	while ((byteRead = read(source, buffer, 1024)) > 0)
 	{
 		byteWrite = write(dst, buffer, byteRead);
 		if (byteWrite == -1)
