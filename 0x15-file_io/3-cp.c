@@ -63,7 +63,7 @@ void exit_and_print(char *msg, char *argument, int code)
  * Return: void
  */
 
-void exit_and_print_int(char *msg, char *argument, int code)
+void exit_and_print_int(char *msg, int argument, int code)
 {
 	dprintf(STDERR_FILENO, msg, argument);
 	exit(code);
