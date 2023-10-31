@@ -14,7 +14,7 @@ int main(int ac, char **av)
 	if (ac != 3)
 		exit_and_print("Usage: cp file_from file_to\n", av[0], 97);
 
-	source = read_textfile(av[1], 114);
+	source = open(av[1], O_RDONLY);
 	if (source == -1)
 		exit_and_print("Error: Can't read from file %s\n", av[1], 98);
 
