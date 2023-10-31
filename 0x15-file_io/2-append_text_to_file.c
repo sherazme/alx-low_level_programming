@@ -16,7 +16,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	fd = open(filename, O_CREAT | O_APPEND | O_EXCL | O_RDWR );
 	if (fd == -1)
-		return (-1);
+		return (-2);
 
 	if (text_content != NULL)
 	{
@@ -24,7 +24,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		if (byteWrite == -1)
 		{
 			close(fd);
-			return (-1);
+			return (-3);
 		}
 	}
 
