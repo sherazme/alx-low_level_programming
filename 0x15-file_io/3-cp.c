@@ -49,7 +49,7 @@ int main(int ac, char **av)
  * Return: void
  */
 
-void exit_and_print(char *msg, char *argument, int code)
+void exit_and_print(const char *msg, const char *argument, int code)
 {
 	dprintf(STDERR_FILENO, msg, argument);
 	exit(code);
