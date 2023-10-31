@@ -56,7 +56,7 @@ void exit_and_print(char *msg, char *argument, int code)
 }
 
 /**
- * exit_and_print - exit and print
+ * exit_and_print_int - exit and print
  * @msg: message to be printed
  * @argument: av
  * @code: exit code
