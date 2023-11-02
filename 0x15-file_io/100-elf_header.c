@@ -14,7 +14,7 @@ void check_if_elf(unsigned char *e_ident)
 		if (e_ident[index] != 127 &&
 		    e_ident[index] != 'E' &&
 		    e_ident[index] != 'L' &&
-		    e_ident[index] != 'F') /*0x7F is 127 in ASCII*/
+		    e_ident[index] != 'F')
 		{
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
@@ -25,12 +25,9 @@ void check_if_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic - prints the magic numbers of the ELF file
- *
- * @e_ident: a pointer to an array of bytes specifies
- *           how to interpret the file
- *
- * Return: nothing
+ * print_magic - prints the magic numbers
+ * @e_ident: a pointer to an array of bytes
+ * Return: void
 */
 void print_magic(unsigned char *e_ident)
 {
@@ -38,14 +35,14 @@ void print_magic(unsigned char *e_ident)
 
 	printf("  Magic    ");
 
-	while (index < EI_NIDENT) /*EI_NIDENT == sizeof(e_ident[]) = 16*/
+	while (index < EI_NIDENT)
 	{
 		printf("%02x", e_ident[index]);
 
 		if (index == EI_NIDENT - 1)
 			printf("\n");
 		else
-			printf(" "); /*space each number*/
+			printf(" ");
 
 		index++;
 	}
