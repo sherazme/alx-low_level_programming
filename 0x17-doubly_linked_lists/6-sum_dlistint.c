@@ -2,7 +2,7 @@
 
 /**
  * sum_dlistint - count sum of list elements
- * @h: Head of list
+ * @head: Head of list
  * Return: The sum of nodes
  */
 int sum_dlistint(dlistint_t *head)
