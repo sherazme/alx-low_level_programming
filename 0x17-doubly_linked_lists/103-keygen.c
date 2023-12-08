@@ -10,11 +10,8 @@
  */
 int biggest(char *username, int len)
 {
-	int point, int vpoint;
+	int point = *username, vpoint = 0;
 	unsigned int rand_num;
-
-	point = *username;
-	vpoint = 0;
 
 	while (vpoint < len)
 	{
@@ -87,7 +84,7 @@ int main(int argc, char **argv)
 	long alph[] = {
 		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
 		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
-		0x723161513346655a, 0x6b756biggest94b646850 };
+		0x723161513346655a, 0x6b756f494b646850 };
 	(void) argc;
 
 	for (len = 0; argv[1][len]; len++)
