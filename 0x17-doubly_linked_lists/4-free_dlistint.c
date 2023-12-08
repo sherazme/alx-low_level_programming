@@ -4,7 +4,7 @@
  * free_dlistint - Free list
  * @head: Head of list
  */
- 
+
 void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *tmp = head;
