@@ -7,6 +7,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <elf.h>
+
+/* Macros */
+#define BUFFSIZE 1024
 
 int _putchar(char c);
 
