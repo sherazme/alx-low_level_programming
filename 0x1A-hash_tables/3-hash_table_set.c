@@ -7,7 +7,7 @@
  * @value: element Value
  * Return: 1 if succeeded 0 otherwise
  */
- 
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	int sv;
@@ -47,9 +47,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
  * @key: key of new element
  * @value: Value of new element
  * @index: Index of new element
- * Return: 1 already exist updated -1 if element couldnt be updated, 0 if doesnt exist
+ * Return: 1 if updated -1 if element couldnt be updated, 0 if doesnt exist
  */
- 
+
 int update_key(hash_table_t *ht, const char *key, const char *value,
 	       unsigned long int index)
 {
