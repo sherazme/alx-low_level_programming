@@ -47,11 +47,11 @@ typedef struct hash_table_s
  */
 typedef struct shash_node_s
 {
-     char *key;
-     char *value;
-     struct shash_node_s *next;
-     struct shash_node_s *sprev;
-     struct shash_node_s *snext;
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
 } shash_node_t;
 
 /**
@@ -66,10 +66,10 @@ typedef struct shash_node_s
  */
 typedef struct shash_table_s
 {
-     unsigned long int size;
-     shash_node_t **array;
-     shash_node_t *shead;
-     shash_node_t *stail;
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
 } shash_table_t;
 
 /* main Functions */
@@ -79,7 +79,8 @@ unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 hash_node_t *create_element(const char *key, const char *value);
-int update_key(hash_table_t *ht, const char *key, const char *value,unsigned long int index);
+int update_key(hash_table_t *ht, const char *key, const char *value,
+		unsigned long int index);
 char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
@@ -92,7 +93,8 @@ char *shash_table_get(const shash_table_t *ht, const char *key);
 void shash_table_print(const shash_table_t *ht);
 void shash_table_print_rev(const shash_table_t *ht);
 void shash_table_delete(shash_table_t *ht);
-int update_key_sorted(shash_table_t *ht, const char *key, const char *value, unsigned long int index);
+int update_key_sorted(shash_table_t *ht, const char *key, const char *value,
+		unsigned long int index);
 shash_node_t *create_element_sorted(const char *key, const char *value);
 int insert_dllist(shash_node_t *element, shash_table_t *ht);
 

@@ -158,7 +158,6 @@ int insert_dllist(shash_node_t *element, shash_table_t *ht)
 {
 	shash_node_t *tmp;
 
-	
 	if (ht->shead == NULL || strcmp(element->key, ht->shead->key) < 0)
 	{
 		element->snext = ht->shead;
@@ -243,7 +242,7 @@ void shash_table_print(const shash_table_t *ht)
  * shash_table_print_rev - Print reverseed sorted hash table
  * @ht: Pointer to hash table
  */
- 
+
 void shash_table_print_rev(const shash_table_t *ht)
 {
 	shash_node_t *element;
